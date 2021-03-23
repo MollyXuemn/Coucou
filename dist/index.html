@@ -26,25 +26,25 @@
       }
 
       aside {
-        border-right: 1px solid rgba(0, 0, 0, 0.04);
-        padding: 20px;
-        padding-right: 40px;
-        min-height: 100vh;
-        min-width: 280px;
+        border-right: 2px solid rgba(0, 0, 0, 0.04);
+        padding: 10px;
+        padding-right: 15px;
+        min-height: 50vh;
+        min-width: 100px;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
       }
 
-      aside h1 {
+      /* aside h1 {
         margin: 0;
         margin-bottom: 30px;
         font-size: 20px;
-      }
+      } */
 
       aside a {
         display: block;
-        font-size: 14px;
-        margin-top: 5px;
+        font-size: 11px;
+        margin-top: 10px;
       }
 
       aside a.active {
@@ -71,33 +71,17 @@
         z-index: 999;
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
       }</style>
-  <script src="/bump.js"></script></head>
+  <script src="/infinite.js"></script></head>
   <body>
     <main>
       <aside>
-        <h1>aladino examples</h1>
-        <a href="#">Basic</a>
-        <a href="#">Flags</a>
-        <a href="#">Buttons</a>
-        <a href="#">Accordion</a>
-        <a href="/bump.html">Bump</a>
-        <a href="/follow.html">Follow</a>
-        <a href="/hover.html">Hover</a>
-        <a href="/spiral.html">Spiral</a>
-        <a href="/scroll.html">Scroll</a>
-        <a href="/slider.html">Slider</a>
+        
         <a href="/infinite.html">Infinite Slider</a>
-        <a href="/grid.html">Grid</a>
+        
       </aside>
 
       <iframe class="iframe" allow="autoplay" src=""></iframe>
 
-      <a class="edit" href="" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000">
-          <path fill="none" d="M0 0h24v24H0V0z"></path>
-          <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path>
-        </svg>
-      </a>
     </main>
 
     <script>function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -114,8 +98,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 var links = _toConsumableArray(document.querySelectorAll("aside a"));
 
-var iframe = document.querySelector(".iframe");
-var edit = document.querySelector(".edit");
+var iframe = document.querySelector(".iframe"); // const edit = document.querySelector(".edit");
 
 var update = function update() {
   current = location.hash ? location.hash.substring(1) : links[0].getAttribute("href");
@@ -124,8 +107,7 @@ var update = function update() {
     return l.classList.remove("active");
   });
   var link = document.querySelector("a[href='".concat(current, "']"));
-  link.classList.add("active");
-  edit.href = "https://github.com/luruke/aladino/tree/master/docs/".concat(current);
+  link.classList.add("active"); // edit.href = `https://github.com/luruke/aladino/tree/master/docs/${current}`;
 };
 
 links.forEach(function (link) {

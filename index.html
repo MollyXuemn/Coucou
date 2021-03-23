@@ -30,25 +30,25 @@
       }
 
       aside {
-        border-right: 1px solid rgba(0, 0, 0, 0.04);
-        padding: 20px;
-        padding-right: 40px;
-        min-height: 100vh;
-        min-width: 280px;
+        border-right: 2px solid rgba(0, 0, 0, 0.04);
+        padding: 10px;
+        padding-right: 15px;
+        min-height: 50vh;
+        min-width: 100px;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
       }
 
-      aside h1 {
+      /* aside h1 {
         margin: 0;
         margin-bottom: 30px;
         font-size: 20px;
-      }
+      } */
 
       aside a {
         display: block;
-        font-size: 14px;
-        margin-top: 5px;
+        font-size: 11px;
+        margin-top: 10px;
       }
 
       aside a.active {
@@ -92,7 +92,7 @@
     <script>
       const links = [...document.querySelectorAll("aside a")];
       const iframe = document.querySelector(".iframe");
-      const edit = document.querySelector(".edit");
+      // const edit = document.querySelector(".edit");
 
       const update = () => {
         current = location.hash
@@ -105,7 +105,7 @@
         const link = document.querySelector(`a[href='${current}']`);
         link.classList.add("active");
 
-        edit.href = `https://github.com/luruke/aladino/tree/master/docs/${current}`;
+        // edit.href = `https://github.com/luruke/aladino/tree/master/docs/${current}`;
       };
 
       links.forEach((link) => {
