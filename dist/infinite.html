@@ -173,15 +173,15 @@
         }
 
         float luma(vec3 color) {
-          return dot(color, vec3(0.299, 0.587, 0.114));
+          return dot(color, vec3(0.59, 0.57, 0.86));
         }
 
         void main() {
           vec4 color = coverTexture(image, sizeImage, vUv);
 
           vec3 duotone = mix(
-            vec3(0.149,0.141,0.912),
-            vec3(0.000, 0.455, 0.851),
+            vec3(0.867, 0.867, 0.867),
+            vec3(0.000, 0.255, 0.851),
             luma(color.rgb)
           );
 
