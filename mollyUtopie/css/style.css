@@ -1,0 +1,87 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-weight: 200;
+    font-size: 1rem;
+    font-family:'Courier New', Courier, monospace;
+    color: darkgrey;
+}
+
+.intro-left {
+    background: url(../img/v1.jpg);
+    position: fixed;
+    left: 0;
+    width: 28%;
+    height: 100%;
+    color:rgba(100, 145, 134, 0.959);
+} 
+
+.v1 {
+    width: 11rem;
+    height: 16rem;
+    border-radius: 50%;
+    margin: 1rem;
+}
+
+@media  (max-width: 786px) {
+    .intro-left{
+        height: 30vh;
+        margin: 0;
+        position: relative;
+        width: 100%;
+    }
+}
+
+.full-height {
+    height: 100%;
+}
+
+.quote {
+    float: right;
+}
+
+section { 
+    margin: 3rem;
+    font-size: 0.8rem;
+}
+
+.project {
+    font-size: 1.2rem;
+    font-weight:lighter;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    color: darkgrey;
+}
+
+.chambre1 {
+    width: 40rem;
+    height: 26rem;
+}
+.chambre {
+    width: 18rem;
+    height: 13rem;
+}
+
+
+a {
+    color: darkgrey;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.8rem;
+}
+
+/* .panel-right {
+    background-color:rgba(232, 252, 220, 0.521);
+} */
+
+.background {
+    background-color:rgba(232, 252, 220, 0.521);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+    clip-path: inset(15% 0 15% 0);
+    
+}
+
