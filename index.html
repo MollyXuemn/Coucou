@@ -68,7 +68,7 @@
         z-index: 2;
       }
 
-      .homebutton a{
+      .homebutton h4{
         display:inline-flex;
         padding-left: 0px;
         font-size: 13px;
@@ -76,7 +76,7 @@
         overflow: hidden; 
       }
 
-      .homebutton a:hover {
+      .homebutton h4:hover {
         overflow: visible;
         text-decoration: line-through;
         color:rgb(251, 152, 213)
@@ -121,13 +121,11 @@
   </head>
   <body>
     <main class="show">
-      <video muted loop autoplay>
-        <source src="water.mp4" type="video/mp4">
-      </video>
+      <video src="water.mp4" type="video/mp4" muted loop autoplay></video>
        <div class="overlay"></div>
       <aside> 
         <a id="infinite" href="infinite.html"></a>
-        <div class="homebutton" style="text-overflow:clip;"><a href="./mollyhome/indexhome.html" target="_blank" >Molly ❤️ Maison</a></div>
+        <div class="homebutton" style="text-overflow:clip;" onclick="openPage('home')"><h4>Molly ❤️ Maison</h4></div>
         <a href="infinite.html">Infinite</a>
         <a href="follow.html">FollowMe</a>
         <a href="./mollyUtopie/Molly's Utopie.html">Utopie</a>
@@ -174,6 +172,11 @@
 
       window.addEventListener("popstate", update);
       update();
+    </script>
+    <script>
+      function openPage(pageUrl) {
+        window.open("./mollyhome/indexhome.html")
+      }
     </script>
   </body>
 </html>
