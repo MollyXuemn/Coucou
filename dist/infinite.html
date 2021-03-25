@@ -35,6 +35,15 @@
         opacity: 0.75;
       }
 
+      .hide {
+        display: none;
+      }
+      .cell:hover + .hide {
+        display: block;
+        color: rgba(0, 174, 255, 0.603);
+        z-index: 10;
+      }
+
       .cell img {
         width: 100%;
         height: 100%;
@@ -51,6 +60,7 @@
       <div class="carousel">
         <div class="cell">
           <a href="/mollyhome/indexhome.html"><img src="/1.2f9c0db9.jpg" alt="chambreideale"></a>
+          <div class="hide">Slide me crazily</div>
         </div>
         <div class="cell">
           <a href="/assets/images/designJardin.jpg"><img src="/2.df66db45.jpg" alt="jardin"></a>
