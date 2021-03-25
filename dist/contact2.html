@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>.var-highlight{
+            color: #fa95cc;
+            
+        }
+        .string-highlight{
+            color: rgba(240, 240, 240, 0.822);
+        }
+
+        #typewriter{
+                font-size: 17px;
+                font-weight:bold;
+                margin: 50px;
+                font-family: "Courier New";
+                line-height: 1.5;
+        }
+
+        #typewriter::after{
+                    content: "|";
+                    animation: blink 500ms linear infinite alternate;
+        }
+
+
+        @-webkit-keyframes blink{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+
+        @-moz-keyframes blink{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+
+        @keyframes blink{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }</style>
+</head>
+<body>
+    <pre id="typewriter">
+        <span class="var-highlight">var</span> object = {
+            name: <span class="string-highlight">'Xue Meini'</span>,
+            type: <span class="string-highlight">'Bar'</span>,
+            location: <span class="string-highlight">'Earth'</span>,
+            language: <span class="string-highlight">'English', 'Français', 'Mandarin'</span>,
+            skills:[<span class="string-highlight">'Javascript'</span>,
+                        <span class="string-highlight">'HTML'</span>,
+                        <span class="string-highlight">'CSS'</span>,
+                        <span class="string-highlight">'React'</span>,
+                        <span class="string-highlight">'Node.js'</span>,
+                        <span class="string-highlight">'Three.js'</span>,
+                        <span class="string-highlight">'etc...'</span>];
+        }; 
+    </pre>
+</body>
+<script>function setupTypewriter(t) {
+  var HTML = t.innerHTML;
+  t.innerHTML = "";
+  var cursorPosition = 0,
+      tag = "",
+      writingTag = false,
+      tagOpen = false,
+      typeSpeed = 100,
+      tempTypeSpeed = 0;
+
+  var type = function type() {
+    if (writingTag === true) {
+      tag += HTML[cursorPosition];
+    }
+
+    if (HTML[cursorPosition] === "<") {
+      tempTypeSpeed = 0;
+
+      if (tagOpen) {
+        tagOpen = false;
+        writingTag = true;
+      } else {
+        tag = "";
+        tagOpen = true;
+        writingTag = true;
+        tag += HTML[cursorPosition];
+      }
+    }
+
+    if (!writingTag && tagOpen) {
+      tag.innerHTML += HTML[cursorPosition];
+    }
+
+    if (!writingTag && !tagOpen) {
+      if (HTML[cursorPosition] === " ") {
+        tempTypeSpeed = 0;
+      } else {
+        tempTypeSpeed = Math.random() * typeSpeed + 50;
+      }
+
+      t.innerHTML += HTML[cursorPosition];
+    }
+
+    if (writingTag === true && HTML[cursorPosition] === ">") {
+      tempTypeSpeed = Math.random() * typeSpeed + 50;
+      writingTag = false;
+
+      if (tagOpen) {
+        var newSpan = document.createElement("span");
+        t.appendChild(newSpan);
+        newSpan.innerHTML = tag;
+        tag = newSpan.firstChild;
+      }
+    }
+
+    cursorPosition += 1;
+
+    if (cursorPosition < HTML.length - 1) {
+      setTimeout(type, tempTypeSpeed);
+    }
+  };
+
+  return {
+    type: type
+  };
+}
+
+var typer = document.getElementById('typewriter');
+typewriter = setupTypewriter(typewriter);
+typewriter.type();</script>
+
+</html>
