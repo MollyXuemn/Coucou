@@ -3,6 +3,7 @@
     <title>Aladino</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="/bleucircle.9c3c6d6e.ico">
     <style>html,
       body {
         margin: 0;
@@ -15,39 +16,52 @@
         box-sizing: border-box;
       }
 
-      article {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 10vw;
-        height: 20vh;
-      }
-
-      article img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
       main {
-        top: 100px;
+        top: 0px;
+        position: absolute;
         display: flex;
-        width: 100%;
-        height: 100%;
-        background-color: midnightblue;
+        right: 0;
+        width: 100vw;
+        min-height: 100vh;
+        /* padding: 100px; */
       }
     
       iframe {
         border: 0;
-        flex: 1;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        z-index: 10;
+      }
+
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #135b6d;
+        mix-blend-mode: overlay;
       }
 
       aside {
-        padding-left: 25px;
+        padding-left: 22px;
         min-height: 50vh;
-        min-width: 20px;
-        overflow: auto;
+        min-width: 10vw;
+        overflow: hidden;
+        background:transparent;
         -webkit-overflow-scrolling: touch;
+        z-index: 2;
       }
 
       .homebutton a{
@@ -101,10 +115,11 @@
       }</style>
   <script src="/infinite.js"></script></head>
   <body>
-    <article>
-      <img src="/3.20eadd3a.jpg">
-    </article>
-    <main>
+    <main class="show">
+      <video muted="" loop="" autoplay="">
+        <source src="/water.c6de447c.mp4" type="video/mp4">
+      </video>
+       <div class="overlay"></div>
       <aside> 
         <a id="infinite" href="/infinite.html"></a>
         <div class="homebutton" style="text-overflow:clip;"><a href="/mollyhome/indexhome.html" target="_blank">Molly ❤️ Maison</a></div>
@@ -116,11 +131,11 @@
         <a href="/assets/images/corpfemme.jpg">Corp</a>
         <a href="/assets/images/designJardin.jpg">Jardin</a>
         <a href="/assets/images/nomanland1.jpg">Inspiration</a>
-        <a href="#">Contact</a>
+        <a href="/contact.html">Contact</a>
       </aside>
-
+    
       <iframe class="iframe" allow="autoplay" src=""></iframe>
-
+      
     </main>
 
     <script>function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -158,125 +173,5 @@ links.forEach(function (link) {
 });
 window.addEventListener("popstate", update);
 update();</script>
-
-    <script type="module">
-      import Aladino from "./src/index.js";
-      import Pointer from "./assets/pointer.js";
-      import lerp from "./assets/lerp.js";
-
-      const pointer = new Pointer();
-      const aladino = new Aladino({
-        density: 20,
-      });
-
-      document.body.appendChild(aladino.canvas);
-
-      const material = aladino.material({
-        vertex: /* glsl */ `
-          attribute vec2 position;
-          attribute vec2 uv;
-
-          uniform mat4 projection;
-          uniform float time;
-          uniform vec2 speed;
-
-          varying vec2 vUv;
-
-          float parabola( float x, float k ) {
-            return pow( 4.0*x*(1.0-x), k );
-          }
-
-          void main() {
-            vUv = uv;
-
-            vec4 pos = vec4(position, 0.0, 1.0);
-
-            vec2 spee = speed * 0.03;
-
-            pos.x += parabola(uv.y, 1.0) * spee.x;
-            pos.y -= parabola(uv.x, 1.0) * spee.y;
-
-            gl_Position = projection * pos;
-          }
-        `,
-        fragment: /* glsl */ `
-          precision highp float;
-
-          uniform vec2 size;
-          uniform vec2 sizeImage;
-          uniform sampler2D image;
-          uniform vec2 speed;
-
-          varying vec2 vUv;
-
-          vec4 coverTexture(sampler2D tex, vec2 imgSize, vec2 ouv) {
-            vec2 s = size;
-            vec2 i = imgSize;
-
-            float rs = s.x / s.y;
-            float ri = i.x / i.y;
-            vec2 new = rs < ri ? vec2(i.x * s.y / i.y, s.y) : vec2(s.x, i.y * s.x / i.x);
-            vec2 offset = (rs < ri ? vec2((new.x - s.x) / 2.0, 0.0) : vec2(0.0, (new.y - s.y) / 2.0)) / new;
-            vec2 uv = ouv * s / new + offset;
-          
-            return texture2D(tex, uv);
-          }
-
-          void main() {
-            vec2 s = vUv;
-
-            s -= .5;
-            s *= 0.7;
-            s -= (speed * 0.03);
-            s += .5;
-
-            gl_FragColor = coverTexture(image, sizeImage, s);
-          }
-        `,
-      });
-
-      const el = document.querySelector("article");
-
-      const carpet = aladino.carpet(el, {
-        material,
-        uniforms: {
-          image: aladino.texture(el.querySelector("img").src),
-          speed: [0, 0],
-        },
-      });
-
-      let oldSpeed = [0, 0];
-
-      const update = () => {
-        requestAnimationFrame(update);
-
-        carpet.position[0] = lerp(
-          carpet.position[0],
-          pointer.coords[0] - carpet.bounds.width / 2,
-          0.2
-        );
-        carpet.position[1] = lerp(
-          carpet.position[1],
-          pointer.coords[1] - carpet.bounds.height / 2,
-          0.2
-        );
-
-        carpet.uniforms.speed[0] = lerp(
-          carpet.uniforms.speed[0],
-          (carpet.position[0] - oldSpeed[0]) * 0.1,
-          0.7
-        );
-        carpet.uniforms.speed[1] = lerp(
-          carpet.uniforms.speed[1],
-          (carpet.position[1] - oldSpeed[1]) * 0.1,
-          0.7
-        );
-
-        oldSpeed[0] = carpet.position[0];
-        oldSpeed[1] = carpet.position[1];
-      };
-
-      update();
-    </script>
   </body>
 </html>

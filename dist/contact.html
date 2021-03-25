@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>html,
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: "Noto Sans", sans-serif;
+          box-sizing: border-box;
+        }
+  
+        .intro {
+            display: flex;
+            padding: 50px;
+            color: white;
+            height: 100vh;
+        } 
+
+        .pretext {
+            margin-top: 50px;
+        }
+
+        .typing {
+            position: relative;
+            margin-left: 15px;
+            margin-top: 45px;
+            max-width: 50%;
+            line-height: 1.6;
+        }
+
+        .typing::after {
+            content: "";
+            position: absolute;
+            top: -3px;
+            right: -7px;
+            width: 1px;
+            height: 5%;
+            border-right: 2px solid white ;
+            animation: blink 0.5s infinite ease;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .social {
+            position: absolute;
+            bottom: 30px;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social li {
+        list-style: none;
+        }
+        .social li a
+        {
+        display: inline-block;
+        margin-right: 20px;
+        filter: invert(1);
+        transform: scale(0.5);
+        transition: 0.5s;
+        }
+        .social li a:hover
+        {
+        transform: scale(0.5) translateY(-15px);
+        }</style>
+</head>
+
+<body>
+    <div class="intro">
+        <h3 class="pretext"> < type: > </h3>
+        <h3 class="typing"></h3> 
+    </div>
+    <div>
+        <ul class="social">
+            <li>
+                <a href=""><img src="https://img.icons8.com/small/64/000000/github.png"></a>
+            </li>
+            <li>
+                <a href=""><img src="https://img.icons8.com/ios/64/000000/facebook-new.png"></a>
+            </li>
+            <li>
+                <a href=""><img src="https://img.icons8.com/ios/64/000000/linkedin.png"></a>
+            </li>
+        </ul>
+    </div>
+    <script>var texts = ["i am Molly. I studied in Frace and i make websites Life is miserable for the poor, futile for the rich, and hopes for human progress and happiness are illusory.", "J’ai désiré ardemment pour le bidon vois un côté vous, mais vous demande que pour se rappeler, je ne peux pas ouvrir la bouche à la demande de devoir vous voir. Ce n’est pas parce qu’arrogant, vous avez su que je ne suis pas arrogant devant vous peux dire, mais être parce que, seulement vous a également pour impliquer mon temps, nous réunissons avons seulement alors la signification.", "Si vous pouviez le dire avec des mots, il n’y aurait aucune raison de le peintre."];
+var count = 0;
+var index = 0;
+var currentText = "";
+var letter = "";
+
+(function type() {
+  if (count === texts.length) {
+    count = 0;
+  }
+
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+  document.querySelector('.typing').textContent = letter;
+
+  if (letter.length === currentText.length) {
+    count++;
+    index = 0;
+  }
+
+  setTimeout(type, 200);
+})();</script>
+
+</body>
+</html>
