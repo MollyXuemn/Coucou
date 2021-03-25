@@ -7,7 +7,7 @@
     <title>Contact</title>
     <style>
         .var-highlight{
-            color: #fa95cc;
+            color: #fa95cce7;
             
         }
         .string-highlight{
@@ -42,14 +42,38 @@
             0%{opacity: 0;}
             100%{opacity: 1;}
         }
+
+        .social {
+            position: absolute;
+            right: 50px;
+            bottom: 30px;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social li {
+        list-style: none;
+        }
+        .social li a
+        {
+        display: inline-block;
+        margin-right: 20px;
+        filter: invert(1);
+        transform: scale(0.5);
+        transition: 0.5s;
+        }
+        .social li a:hover
+        {
+        transform: scale(0.5) translateY(-15px);
+        }
     </style>
 </head>
 <body>
     <pre id="typewriter">
-        <span class="var-highlight">var</span> object = {
+        <span class="var-highlight">var</span> self_introduction = {
             name: <span class="string-highlight">'Xue Meini'</span>,
-            type: <span class="string-highlight">'Bar'</span>,
-            location: <span class="string-highlight">'Earth'</span>,
+            location: <span class="string-highlight">'Mars'</span>,
             language: <span class="string-highlight">'English', 'Français', 'Mandarin'</span>,
             skills:[<span class="string-highlight">'Javascript'</span>,
                         <span class="string-highlight">'HTML'</span>,
@@ -59,7 +83,35 @@
                         <span class="string-highlight">'Three.js'</span>,
                         <span class="string-highlight">'etc...'</span>];
         }; 
+        (<span class="var-highlight">function</span> self-poetry(){
+            let age = <span class="string-highlight">0</span>,
+            let duration = <span class="string-highlight">0</span>,
+            let deadline_of_mylife = <span class="string-highlight">99</span>,
+            for(age = 25; age < = deadline_of_mylife; age++) {<span class="string-highlight">
+                puts("Regret and Pain")
+            </span>},
+            if(duration === "infinite") { <span class="string-highlight"></span>
+                result = <span class="string-highlight">" Love Design and French until the death ";</span>
+            }
+            elseif { <span class="string-highlight">
+                duration++;</span>
+                result = <span class="string-highlight">"never end...";</span>
+            }
+        })();
     </pre>
+    <div>
+        <ul class="social">
+            <li>
+                <a href=""><img src="https://img.icons8.com/small/64/000000/github.png"/></a>
+            </li>
+            <li>
+                <a href=""><img src="https://img.icons8.com/ios/64/000000/facebook-new.png"/></a>
+            </li>
+            <li>
+                <a href=""><img src="https://img.icons8.com/ios/64/000000/linkedin.png"/></a>
+            </li>
+        </ul>
+    </div>
 </body>
 <script>
     function setupTypewriter(t) {
