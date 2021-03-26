@@ -37,18 +37,21 @@
         opacity: 0.75;
       }
       .cell .touchshow {
+        display: flex;
+        justify-content: center;
+        text-align: center;
         font-family: 'Chango', cursive;
         visibility: hidden;
         width: 120px;
         background-color: transparent;
         color: #fff;
-        text-align: center;
-        padding-top: 10px;
-        position: absolute;
-        z-index: 1;
+        margin: auto;
+        position: relative;
+        z-index: 10;
       }
       .cell:hover .touchshow{
         visibility: visible;
+        z-index: 10;
       }
 
       .cell img {

@@ -3,6 +3,8 @@
     <title>Aladino</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet"> 
     <link rel="shortcut icon" type="image/jpg" href="/bleucircle.9c3c6d6e.ico">
     <style>html,
       body {
@@ -33,6 +35,20 @@
         position: relative;
         z-index: 10;
         opacity: 0.9;
+      }
+      .iframe .touchshow {
+        font-family: 'Chango', cursive;
+        visibility: hidden;
+        width: 120px;
+        background-color: transparent;
+        color: #fff;
+        text-align: center;
+        margin-top: 25px;
+        position: relative;
+        z-index: 10;
+      }
+      .iframe:hover .touchshow{
+        visibility: visible;
       }
 
       video {
@@ -132,8 +148,8 @@
         <a href="/assets/images/nomanland1.jpg">Inspiration</a>
         <a href="/contact.html">Contact</a>
       </aside>
-    
-      <iframe class="iframe" allow="autoplay" src=""></iframe>
+      <!-- <div><span>sdadasdasd</span></div> -->
+      <iframe class="iframe" allow="autoplay" src=""><span class="touchshow">Fly with me, slide crazily</span></iframe>
 
     </main>
 
