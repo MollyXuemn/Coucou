@@ -5,56 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <style>html,
-        body {
-          margin: 0;
-          padding: 0;
-          font-family: "Noto Sans", sans-serif;
-          box-sizing: border-box;
+    <style>.var-highlight{
+            color: #fa95cce7;
+            
         }
-  
-        .intro {
-            display: flex;
-            padding: 50px;
-            color: white;
-            height: 100vh;
-        } 
-
-        .pretext {
-            margin-top: 50px;
+        .string-highlight{
+            color: rgba(240, 240, 240, 0.822);
         }
 
-        .typing {
-            position: relative;
-            margin-left: 15px;
-            margin-top: 45px;
-            max-width: 50%;
-            line-height: 1.6;
+        #typewriter{
+                font-size: 17px;
+                font-weight:bold;
+                margin: 50px;
+                font-family: "Courier New";
+                line-height: 1.5;
         }
 
-        .typing::after {
-            content: "";
-            position: absolute;
-            top: -3px;
-            right: -7px;
-            width: 1px;
-            height: 5%;
-            border-right: 2px solid white ;
-            animation: blink 0.5s linear infinite alternate ease;
+        #typewriter::after{
+                    content: "|";
+                    animation: blink 500ms linear infinite alternate;
         }
 
-        @keyframes blink {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
 
+        @-webkit-keyframes blink{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+
+        @-moz-keyframes blink{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+
+        @keyframes blink{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
         }
 
         .social {
             position: absolute;
+            right: 50px;
             bottom: 30px;
             z-index: 10;
             display: flex;
@@ -77,47 +67,119 @@
         transform: scale(0.5) translateY(-15px);
         }</style>
 </head>
-
 <body>
-    <div class="intro">
-        <h3 class="pretext"> < type: > </h3>
-        <h3 class="typing"></h3> 
-    </div>
+    <pre id="typewriter">
+        <span class="var-highlight">var</span> self_introduction = {
+            name: <span class="string-highlight">'Xue Meini'</span>,
+            location: <span class="string-highlight">'Mars'</span>,
+            language: <span class="string-highlight">'English', 'Français', 'Mandarin'</span>,
+            skills:[<span class="string-highlight">'Javascript'</span>,
+                    <span class="string-highlight">'HTML'</span>,
+                    <span class="string-highlight">'CSS'</span>,
+                    <span class="string-highlight">'React'</span>,
+                    <span class="string-highlight">'Node.js'</span>,
+                    <span class="string-highlight">'Three.js'</span>,
+                    <span class="string-highlight">'etc...'</span>];
+        }; 
+        (<span class="var-highlight">function</span> self-poetry(){
+            let age = <span class="string-highlight">0</span>,
+            let duration = <span class="string-highlight">0</span>,
+            let deadline_of_mylife = <span class="string-highlight">99</span>,
+            for(age = 25; age ﹤= deadline_of_mylife; age++) {<span class="string-highlight">
+                puts("Regret and Pain")
+            </span>},
+            if(duration === "infinite") { <span class="string-highlight"></span>
+                result = <span class="string-highlight">" Love Programming, Design, French and _ forever ";</span>
+            }
+            elseif { <span class="string-highlight">
+                duration++;</span>
+                result = <span class="string-highlight">" never end... ";</span>
+            }
+        })();
+    </pre>
     <div>
         <ul class="social">
             <li>
-                <a href=""><img src="https://img.icons8.com/small/64/000000/github.png"></a>
+                <a href="https://mollyxuemn.github.io/Coucou/"><img src="https://img.icons8.com/small/64/000000/github.png"></a>
             </li>
             <li>
-                <a href=""><img src="https://img.icons8.com/ios/64/000000/facebook-new.png"></a>
+                <a href="https://www.facebook.com/meini.xue"><img src="https://img.icons8.com/ios/64/000000/facebook-new.png"></a>
             </li>
             <li>
-                <a href=""><img src="https://img.icons8.com/ios/64/000000/linkedin.png"></a>
+                <a href="https://www.linkedin.com/in/meini-xue-527940a4/"><img src="https://img.icons8.com/ios/64/000000/linkedin.png"></a>
             </li>
         </ul>
     </div>
-    <script>var texts = ["i am Molly. I studied in Frace and i make websites Life is miserable for the poor, futile for the rich, and hopes for human progress and happiness are illusory.", "J’ai désiré ardemment pour le bidon vois un côté vous, mais vous demande que pour se rappeler, je ne peux pas ouvrir la bouche à la demande de devoir vous voir. Ce n’est pas parce qu’arrogant, vous avez su que je ne suis pas arrogant devant vous peux dire, mais être parce que, seulement vous a également pour impliquer mon temps, nous réunissons avons seulement alors la signification.", "Si vous pouviez le dire avec des mots, il n’y aurait aucune raison de le peintre."];
-var count = 0;
-var index = 0;
-var currentText = "";
-var letter = "";
-
-(function type() {
-  if (count === texts.length) {
-    count = 0;
-  }
-
-  currentText = texts[count];
-  letter = currentText.slice(0, ++index);
-  document.querySelector('.typing').textContent = letter;
-
-  if (letter.length === currentText.length) {
-    count++;
-    index = 0;
-  }
-
-  setTimeout(type, 200);
-})();</script>
-
 </body>
+<script>function setupTypewriter(t) {
+  var HTML = t.innerHTML;
+  t.innerHTML = "";
+  var cursorPosition = 0,
+      tag = "",
+      writingTag = false,
+      tagOpen = false,
+      typeSpeed = 100,
+      tempTypeSpeed = 0;
+
+  var type = function type() {
+    if (writingTag === true) {
+      tag += HTML[cursorPosition];
+    }
+
+    if (HTML[cursorPosition] === "<") {
+      tempTypeSpeed = 0;
+
+      if (tagOpen) {
+        tagOpen = false;
+        writingTag = true;
+      } else {
+        tag = "";
+        tagOpen = true;
+        writingTag = true;
+        tag += HTML[cursorPosition];
+      }
+    }
+
+    if (!writingTag && tagOpen) {
+      tag.innerHTML += HTML[cursorPosition];
+    }
+
+    if (!writingTag && !tagOpen) {
+      if (HTML[cursorPosition] === " ") {
+        tempTypeSpeed = 0;
+      } else {
+        tempTypeSpeed = Math.random() * typeSpeed + 50;
+      }
+
+      t.innerHTML += HTML[cursorPosition];
+    }
+
+    if (writingTag === true && HTML[cursorPosition] === ">") {
+      tempTypeSpeed = Math.random() * typeSpeed + 50;
+      writingTag = false;
+
+      if (tagOpen) {
+        var newSpan = document.createElement("span");
+        t.appendChild(newSpan);
+        newSpan.innerHTML = tag;
+        tag = newSpan.firstChild;
+      }
+    }
+
+    cursorPosition += 1;
+
+    if (cursorPosition < HTML.length - 1) {
+      setTimeout(type, tempTypeSpeed);
+    }
+  };
+
+  return {
+    type: type
+  };
+}
+
+var typer = document.getElementById('typewriter');
+typewriter = setupTypewriter(typewriter);
+typewriter.type();</script>
+
 </html>

@@ -7,6 +7,8 @@
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet"> 
     <style>
       html,
       body {
@@ -38,14 +40,19 @@
         height: 35vh;
         opacity: 0.75;
       }
-
-      .hide {
-        display: none;
+      .cell .touchshow {
+        font-family: 'Chango', cursive;
+        visibility: hidden;
+        width: 120px;
+        background-color: transparent;
+        color: #fff;
+        text-align: center;
+        padding: 10px 5px;
+        position: relative;
+        z-index: 1;
       }
-      .cell:hover + .hide {
-        display: block;
-        color: rgba(0, 174, 255, 0.603);
-        z-index: 10;
+      .cell:hover .touchshow{
+        visibility: visible;
       }
 
       .cell img {
@@ -65,30 +72,29 @@
       <div class="carousel">
         <div class="cell">
           <a href="./mollyhome/indexhome.html"><img src="assets/images/1.jpg" alt="chambreideale" /></a>
-          <div class="hide">Slide me crazily</div>
+          <span class="touchshow">Fly with me, slide crazily</span>
         </div>
         <div class="cell">
           <a href="./assets/images/designJardin.jpg"><img src="assets/images/2.jpg" alt="jardin" /></a>
-        </div>
-        <div class="cell">
-          <a href="./assets/images/corpfemme.jpg"><img src="assets/images/4.jpg" alt="corpfemme" /></a>
-        </div>
-        <div class="cell">
-          <a href="./assets/images/v total.jpg"><img src="assets/images/3.jpg" alt="vetement" /></a>
+          <span class="touchshow">Fly with me, slide crazily</span>
         </div>
         <div class="cell">
           <a href="./assets/images/nomanland1.jpg"><img src="assets/images/5.jpg" alt="nomanland2" /></a>
+          <span class="touchshow">Fly with me, slide crazily</span>
         </div>
         <div class="cell">
+          <a href="./assets/images/corpfemme.jpg"><img src="assets/images/4.jpg" alt="corpfemme" /></a>
+          <span class="touchshow">Fly with me, slide crazily</span>
+        </div>
+        <div class="cell">
+          <a href="./assets/images/v total.jpg"><img src="assets/images/3.jpg" alt="vetement" /></a>
+          <span class="touchshow">Fly with me, slide crazily</span>
+        </div>
+        
+        <div class="cell">
           <a href="./assets/images/salleensemble.jpg"><img src="assets/images/6.jpg" alt="salleensemble" /></a>
+        </div> 
         </div>
-        
-        </div>
-        
-        
-      </div>
-      <video src="wateranimation.gif" muted loop autoplay></video>
-      
     </div>
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
