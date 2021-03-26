@@ -30,6 +30,7 @@
         border: 0;
         width: 100%;
         height: 100vh;
+        left: 5vw;
         position: relative;
         z-index: 10;
         opacity: 0.9;
@@ -58,6 +59,7 @@
       aside {
         position: relative;
         padding-left: 22px;
+        padding-top: 40px;
         min-height: 50vh;
         min-width: 10vw;
         overflow: hidden;
@@ -65,10 +67,10 @@
         -webkit-overflow-scrolling: touch;
         z-index: 2;
       }
-
+      
       .homebutton h4{
         display:inline-flex;
-        padding-left: 0px;
+        padding-left: 1px;
         font-size: 13px;
         white-space: nowrap; 
         overflow: hidden; 
@@ -86,6 +88,8 @@
         font-size: 11px;
         margin-top: 30px; 
         padding-left: 3vh;
+        
+
       }
 
       aside a.active {
@@ -108,15 +112,15 @@
        <div class="overlay"></div>
       <aside> 
         <div class="homebutton" style="text-overflow:clip;" onclick="openPage('home')"><h4>Molly ❤️ Maison</h4></div>
-        <a href="/infinite.html">Infinite</a>
+        <a href="/infinite.html" onclick="goBack()">Infinite</a>
         <a href="/follow.html">FollowMe</a>
         <a href="/mollyUtopie/Molly's Utopie.html">Utopie</a>
-        <a href="/assets/images/chambre1.jpg">Chambre</a>
-        <a href="/assets/images/salleensemble.jpg">Photographie</a>
-        <a href="/assets/images/corpfemme.jpg">Corp</a>
-        <a href="/assets/images/designJardin.jpg">Jardin</a>
-        <a href="/assets/images/nomanland1.jpg">Inspiration</a>
-        <a href="/contact.html">Contact</a>
+        <a href="/assets/images/chambre1.jpg" target="_self">Chambre</a>
+        <a href="/assets/images/salleensemble.jpg" target="_self">Photographie</a>
+        <a href="/assets/images/corpfemme.jpg" target="_self">Corp</a>
+        <a href="/assets/images/designJardin.jpg" target="_self">Jardin</a>
+        <a href="/text.html">Inspiration</a>
+        <a href="/contact.html" onclick="goBack()">Contact</a>
       </aside>
       
       <iframe class="iframe" allow="autoplay" src=""></iframe>
@@ -160,6 +164,10 @@ window.addEventListener("popstate", update);
 update();</script>
     <script>function openPage(pageUrl) {
   window.open("./mollyhome/indexhome.html");
+}
+
+function goBack() {
+  window.history.back();
 }</script>
   </body>
 </html>
