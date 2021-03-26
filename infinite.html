@@ -5,7 +5,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet"/> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chango&display=swap"/> 
     <style>
       html,
       body {
@@ -38,21 +38,18 @@
         opacity: 0.75;
       }
       .cell .touchshow {
-        display: flex;
+        display: display-outside;
         justify-content: center;
         text-align: center;
         font-family: 'Chango', cursive;
         visibility: hidden;
-        width: 120px;
         background-color: transparent;
         color: #fff;
-        margin: auto;
-        position: relative;
+        position: absolute ;
         z-index: 10;
       }
       .cell:hover .touchshow{
         visibility: visible;
-        z-index: 10;
       }
 
       .cell img {
@@ -63,6 +60,21 @@
 
       canvas {
         z-index: 1;
+      }
+
+      @media only screen and (max-width: 700px) {
+         .carousel {
+          min-width: 100%;
+          position: absolute;
+          padding-left: 50px;
+         }
+
+         img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
       }
     </style>
   </head>
@@ -90,7 +102,6 @@
           <a href="./assets/images/v total.jpg"><img src="assets/images/3.jpg" alt="vetement" /></a>
           <span class="touchshow">Fly with me, slide crazily</span>
         </div>
-        
         <div class="cell">
           <a href="./assets/images/salleensemble.jpg"><img src="assets/images/6.jpg" alt="salleensemble" /></a>
         </div> 

@@ -9,7 +9,7 @@
         margin: 0;
         padding: 0;
         font-family: "Noto Sans", sans-serif;
-        color: rgba(233, 247, 246, 0.685);
+        color: rgba(233, 247, 246, 0.685); 
       }
 
       * {
@@ -34,7 +34,7 @@
         z-index: 10;
         opacity: 0.9;
       }
-
+     
       video {
         position: absolute;
         top: 0;
@@ -79,7 +79,6 @@
         color:rgb(251, 152, 213)
       }
 
-
       aside a {
         display:flex;
         text-align: center;
@@ -102,17 +101,41 @@
         font-size: 120%;
       }
 
-      .edit {
-        position: fixed;
-        bottom: 16px;
-        right: 16px;
-        padding: 12px;
-        border-radius: 50%;
-        margin-bottom: 0px;
-        background-color:midnightblue;
-        opacity: 0.1;
-        z-index: 999;
-        box-shadow: 0 0 4px rgba(40, 38, 151, 0.527);
+      @media only screen and (max-width: 700px) {
+         aside {
+          min-width: 15vw;
+          min-height: 50vh;
+          position: absolute;
+          padding-left: 10px;
+          padding-right: 20px;
+         }
+         aside a {
+          display: flex;
+          text-align: center;
+          font-size: 8px;
+          margin-top: 20px; 
+          padding-left: 5px;
+          z-index: 10;
+         }
+         aside a.active {
+          font-weight: 700;
+          color: lightpink;
+        }
+        a,
+        a:active,
+        a:visited,
+        a:hover {
+          color: inherit;
+          text-decoration: none;
+        }
+        iframe {
+          border: 0;
+          width: 100%;
+          height: 100vh;
+          position: absolute;
+          padding-left: 80px;
+        }
+
       }</style>
   <script src="/infinite.js"></script></head>
   <body>
@@ -132,7 +155,7 @@
         <a href="/assets/images/nomanland1.jpg">Inspiration</a>
         <a href="/contact.html">Contact</a>
       </aside>
-      <!-- <div><span>sdadasdasd</span></div> -->
+      
       <iframe class="iframe" allow="autoplay" src=""></iframe>
 
     </main>
