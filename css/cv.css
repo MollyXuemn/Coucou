@@ -1,0 +1,159 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Heebo", sans-serif;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.5s ease;
+}
+
+section {
+  visibility: hidden;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+.explain {
+  font-size: 10px;
+}
+
+.img-profile {
+  max-width: 12rem;
+  max-height: 12rem;
+  border: 0.5rem solid rgba(255, 255, 255, 0.2) ;
+}
+
+a,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover {
+  color: #e77f65;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+/*NAVIBAR STYLE*/
+
+.vertical-nav {
+  min-width: 240px;
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.navbar {
+  margin-left: 240px;
+  position: sticky;
+  top: 0;
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.navbar.active {
+  margin-left: 0;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/*Sidebar Style*/
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 240px;
+  max-width: 240px;
+  background: #c087f2;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-left: -240px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #6d7fcc;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #7386d5;
+  background: #fff;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #6d7fcc;
+}
+
+/*Content Style*/
+
+#content {
+  width: calc(100% - 280px);
+  margin-left: 280px;
+  transition: all 0.3s;
+}
+
+#content.active {
+  width: 80%;
+  margin: 40px;
+}
+
+/*Mediaqueries*/
+
+@media (max-width: 768px) {
+  #sidebarCollapse span {
+    display: none;
+  }
+}

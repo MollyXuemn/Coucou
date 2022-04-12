@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/doodle/48/000000/information.png"
+    />
+    <!-- Intro-Page CSS  -->
+    <link rel="stylesheet" href="intro/landing.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap"
+      rel="stylesheet"/>
+    <title>Welcome to Molly's Resume</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <!-- my Customized CSS -->
+    <link rel="stylesheet" href="css/cv.css" />
+
+    <!-- Font Awesome JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/fontawesome.min.js"
+      integrity="sha256-7zqZLiBDNbfN3W/5aEI1OX/5uvck9V0yhwKOA9Oe49M="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/solid.min.js"
+      integrity="sha256-JoCB3vT7DUEBtHyKsyjHG/0ab3slcq2L6QnrKf3yO1A="
+      crossorigin="anonymous"
+    ></script>
+    
+  </head>
+
+  <body>
+    <!-- Sidebar  -->
+
+    <nav class="vertical-nav" id="sidebar">
+      <span class="d-none d-lg-block">
+        <img
+          class="img-fluid img-profile rounded-circle mx-auto d-block"
+          src="img/profile.jpg"
+          alt="profilephoto"
+        />
+      </span>
+
+      <ul class="list-unstyled components">
+        <li>
+          <a class="scrollTrigger1" href="#contact">
+            <i class="fas fa-tty"></i> Contact
+          </a>
+        </li>
+        <li>
+          <a class="scrollTrigger3" href="#portfolio">
+            <i class="fas fa-copy"></i> Portfolio
+          </a>
+        </li>
+        <li>
+          <a class="scrollTrigger2" href="#education">
+            <i class="fas fa-book"></i> Education
+          </a>
+        </li>
+        <li>
+          <a class="scrollTrigger4" href="#proexperience">
+            <i class="fas fa-briefcase"></i> Prof Experience
+          </a>
+        </li>
+        <li>
+          <a class="scrollTrigger5" href="#infocompetence">
+            <i class="fas fa-tasks"></i> Informatiques
+          </a>
+        </li>
+        <li>
+          <a class="js-scroll-trigger6" href="#language">
+            <i class="fas fa-language"></i> Languages
+          </a>
+        </li>
+      </ul>
+
+      <div>
+        <ul class="list-inline list-social-icons mb-0">
+          <li class="list-inline-item">
+            <a href="https://github.com/MollyXuemn">
+              <span>
+                <i class="fab fa-github fa-lg"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/meini-xue-527940a4/">
+              <span>
+                <i class="fab fa-linkedin-in fa-lg"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:meini.xue@epfedu.com">
+              <span>
+                <i class="fas fa-at fa-lg"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light togglebar">
+        <div class="container-fluid">
+          <button type="button" id="sidebarCollapse" class="btn btn-info">
+            <i class="fas fa-align-left"></i>
+            <span>Toggle Sidebar</span>
+          </button>
+        </div>
+      </nav>
+
+    <!-- Page Content  -->
+    <div class="page-content" id="content">
+
+
+      <section id="contact">
+        <h2>Who Am I? <i class="fas fa-female fa-1x"></i></h2>
+        <br />
+        <h2>Meini <span class="text-info">XUE</span></h2>
+        <div class="subheading mb-5">
+          <i class="fas fa-map-marked"></i> &nbsp &nbsp 12 Rue de Chateaufort, Antony, FR 92160<br />
+         <i class="fas fa-mobile"></i> &nbsp &nbsp (+33) 7 63 66 44 03<br />
+          <i class="fas fa-envelope-square"></i>&nbsp &nbsp <a href="mailto:meini.xue@epfedu.fr">meini.xue@epfedu.fr</a>
+        </div>
+        <i class="fas fa-quote-right"></i> &nbsp &nbsp<p>
+          Actuellement une étudiante ingénieure numérique à l’EPF école d’ingénieurs en quatrième année.<br />
+          À la recherche d'une alternance particulièrement sur Développement du Web à partir de 12 mois dès Août.
+        </p><i class="fas fa-quote-right"></i>
+      </section>
+
+      <div class="line"></div>
+
+      <section id="portfolio">
+        <div>
+          <h2>What I've Done? <i class="fas fa-list"></i></h2>
+          <br />
+          <h5>
+            <span class="text-danger"><i class="fas fa-exclamation-triangle"></i>
+             &nbsp<b>Clicking the project name or icon leads to the host or the codes</b></span>
+          </h5>
+          <div>
+            <h5>Web Development:<!-- <br />
+              Frontend: React / Redux / Router<br />
+              Backend: Python / Django<br />
+              DataBase: PostgreSQL / MongoDB <br />
+              CSS:Bootstrap4 / Materialize <br />
+              Cloud Service: Firebase <br />  -->
+            </h5>
+            <p>
+              <a href="https://github.com/MollyXuemn/Avocado-ShoppingCart"
+                > Avocado-ShoppingCart</a>
+              <a href="https://github.com/MollyXuemn/Avocado-ShoppingCart"
+                ><i class="fab fa-github-square"></i>
+              </a> &nbsp
+              <span class="explain"
+                >Frontend: React & Redux & Route/ Backend: Node.js/ CSS: Materialize/ Database: API/ Hosting: Firebase
+                </span>
+              
+              <br />
+              <a href="https://github.com/MollyXuemn/BeatMaker"
+                >  BeatMaker </a>
+              <a href="https://github.com/MollyXuemn/BeatMaker"
+                ><i class="fab fa-github-square"></i
+              ></a> &nbsp
+              <span class="explain"
+                >Frontend: React & Redux & Route/ Backend: Svg/ CSS/ Database: API 
+                </span>
+              
+              <br />
+              <a href="https://github.com/MollyXuemn/ToDoList-Final">ToDo List</a>
+              <a href="https://github.com/MollyXuemn/ToDoList-Final"><i class="fab fa-github-square"></i
+              ></a> &nbsp
+              <span class="explain"
+                >Frontend: React & Redux/ Backend: Django/ CSS: Bootstrap4/
+                Hosting: Firebase</span
+              >
+              <br />           
+              <a href="https://github.com/MollyXuemn/Memory/tree/master/resources"
+                >Memory Card Game</a
+              >
+              <a
+                href="https://github.com/MollyXuemn/Memory/tree/master/resources"
+                ><i class="fab fa-github-square"></i
+              ></a> &nbsp
+              <span class="explain"
+                >Frontend: Html & Route/ Backend: Node.js/ CSS/ Database: API </span
+              >
+              <br />
+              
+              <!-- need to be changed -->
+              <a href="https://github.com/MollyXuemn/MyArtProject"
+                > Avocado-ShoppingCart</a>
+              <a href="https://github.com/MollyXuemn/MyArtProject"
+                ><i class="fab fa-github-square"></i>
+              </a> &nbsp
+              <span class="explain"
+                >Frontend: React & Route/ Backend: Node.js/ CSS: Three.js/ Database: API/ Hosting: github pages
+                </span>
+              
+              <br />
+            </p>
+          </div>
+
+          <div>
+            <h5>Java:</h5>
+            <p>
+              <a href="https://github.com/MollyXuemn/RentManager"
+                >Web Java RentManager</a
+              >
+              <a
+                href="https://github.com/MollyXuemn/RentManager"
+                ><i class="fab fa-github-square"></i
+              ></a>
+              <br />
+            </p>
+          </div>
+
+          <div>
+            <h5>Python </h5>
+            <p>
+              <a href="https://github.com/MollyXuemn/MovTrack"
+                >Développement d’un système intelligent pour détecter l’apparition de pathologies
+              </a
+              >
+              <a
+                href="https://github.com/MollyXuemn/MovTrack/blob/US1/task1_20220409.py"
+                ><i class="fab fa-github-square"></i
+              ></a>
+              <br />
+              <br class="explain"
+                > En tant que développeur j’ai construit un système permettant de détecter l’apparition </br>
+                de pathologies en analysant une grande quantité de données sur les mouvements à domicile enregistrés </br>
+                par des objets connectés, puis en utilisant l’optimisation d’algorithme, Python, SQL et JSON 
+              </span>
+              
+              <br />
+            </p>
+          </div>
+
+          
+        </div>
+      </section>
+
+      <div class="line"></div>
+
+      <section id="education">
+        <div>
+          <h2>What I've Learned? <i class="fas fa-book"></i></h2>
+          <br />
+
+          <div>
+            <div>
+              <a href="https://www.epf.fr/en">
+                <h5>EPF École d’Ingénieurs </h5>
+              </a>
+              <h5>
+                L'ingénieure numérique en quatrième année
+              </h5>
+            </div>
+            <div class="text-md-right">
+              <span class="text-danger">Sep 2021 - Present</span>
+            </div>
+
+            <div>
+              <b>Course :</b>
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Web Dev et Application(Frontend: Html/JS/CSS, Iaas)
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Html et Web  (Frontend: Html/JS/CSS)
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Linux et Git
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Programmation Orientée Objet (Java)
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Matériels Mobile (Kotlin, Xml, Androïd)
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Sécurité Organisationnelle (CyberSecurity)
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Gestion de Bases de Données (MySQL)
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Virtualisation (Cloud/Docker/Sass)
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Intelligence Artificielle (Python/ Tensorflow/ Keras)
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Réseaux et Infrastructure
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Stratégie d'Architecture API
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <br />
+          <br />
+
+          <div>
+            <div>
+              <a href="https://www.umanitoba.ca/">
+                <h5>
+                  Université de Manitoba (Manitoba, CA) / Faculté de Mathématique
+                </h5>
+              </a>
+              <h5>Spécialité : Mathématique (Obtenu)</h5>
+            </div>
+            <div class="text-md-right">
+              <span class="text-danger">Sep 2014 - Août 2017</span>
+            </div>
+
+            <div>
+              <b>Course :</b>
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Statistique 
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Modélisation de Modèle(Algorithmes / Matlab)
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Mathématique Computationnel (Matlab)
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Théorie des graphes (Algorithmes/ Réseaux Sociaux)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <br /><br />
+
+          <div>
+            <div>
+              <a href=" ">
+                <h5>
+                  
+                </h5>
+              </a>
+              <h5>Hong Kong University of Science and Technology (Échange)</h5>
+            </div>
+            <div class="text-md-right">
+              <span class="text-danger">Sep 2016 - Dec 2016</span>
+            </div>
+
+            <div>
+              <b>Course :</b>
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Algèbre linéaire appliquée et équations différentielles
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  > Informations sur le calcul multivariable
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-check-square"></i></span
+                  >Géométrie linéaire
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <br />
+          <br />
+        </div>
+      </section>
+
+      <div class="line"></div>
+
+      <section id="proexperience">
+        <div>
+        <br>
+          <h2>What I've Experienced? <i class="fas fa-hammer fa-1x"></i></h2>
+          <br />
+
+          <h5></h5>
+          <a href="https://www.accenture.com/hk-en">
+            <h5>Stage Ingénieur d’analyste de données, HongKong </h5>
+          </a>
+   
+            - Analyste de données</br>
+            - E-commerce </br>
+            - Réalisation de système web financier à partir de JavaScript, HTML et CSS ; 
+            classification de base de données par SQL ; facilitation de la construction 
+            du système d’opération de vente en Python pour le client
+
+          </p>
+
+          <div class="text-md-right">
+            <span class="text-danger"> Février 2021 - Aôut 2021</span>
+          </div>
+
+          <a href="https://www.dji.com/fr">
+            <h5>DJ-Innovation – CDI Assistante technique, ShenZhen</h5>
+          </a>
+          <br>
+            - Assistante technique</br>
+            - Promotion et e-commerce international de Drone</br>
+            - Résolution de problèmes liés au produit ainsi qu'à la promotion du service client,
+            réalisation jusqu'à 50 cas par jour et utilisation d’Excel et Python pour visualiser 
+            les données afin d'améliorer l'efficacité du travail
+
+          </p>
+
+          <div class="text-md-right">
+            <span class="text-danger">Avril 2018 - Aôut 2018</span>
+          </div>
+          
+        </div>
+      </section>
+
+      <div class="line"></div>
+
+      <section id="infocompetence">
+        <div>
+          <h2>
+            What I Know About Tech? <i class="fas fa-laptop-code fa-1x"></i>
+          </h2>
+          <br />
+          <h5>Frontend</h5>
+          <ul class="fa-ul list-inline">
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fab fa-react"></i></span> React /
+              Redux
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fab fa-js"></i></span> Javascript
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fab fa-html5"></i></span> HTML5
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fab fa-bootstrap"></i></span>
+              Bootstrap4
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fas fa-code"></i></i></span>
+              Ajax
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fas fa-code"></i></i></span>
+              Axios
+            </li>
+            &nbsp &nbsp &nbsp
+          </ul>
+          <h5>Backend</h5>
+          <ul class="fa-ul list-inline">
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fab fa-python"></i></span> Python /
+              Django 
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fab fa-node"></i></span>
+              Node.js
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fab fa-google"></i></span>
+              Google Cloud Firebase
+            </li>
+            &nbsp &nbsp &nbsp
+          </ul>
+          <h5>Database</h5>
+          <ul class="fa-ul list-inline">
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fas fa-database"></i></span>
+              MySQL
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fas fa-database"></i></span>
+              MongoDB
+            </li>
+          </ul>
+          <h5>Interactive</h5>
+          <ul class="fa-ul list-inline">
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fab fa-react"></i></span>
+              React Native
+            </li>
+          </ul>
+          <h5>Autre</h5>
+          <ul class="fa-ul list-inline">
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fab fa-linux"></i></span> Linux
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fab fa-git"></i></span> Git
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fas fa-images"></i></span>
+              Tensorflow / Keras
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fas fa-bug"></i></span> Matlab
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <span class="fa-li"><i class="fab fa-java"></i></span> Java
+            </li>
+            &nbsp &nbsp &nbsp
+            
+          </ul>
+        </div>
+      </section>
+
+      <div class="line"></div>
+
+      <section id="language">
+        <div>
+          <h2>What I Speak Usually? <i class="fas fa-volume-up fa-1x"></i></h2>
+          <br />
+          <ul class="fa-ul list-inline">
+            <li class="list-inline-item">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i> Mandarin Maternelle
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star-half"></i> Anglais GRE 320+
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <i class="fas fa-star"></i><i class="fas fa-star-half"></i> Français
+              DALF C1
+            </li>
+            &nbsp &nbsp &nbsp
+            <li class="list-inline-item">
+              <i class="fas fa-star"></i> Japonese Basique
+            </li>
+            &nbsp &nbsp &nbsp
+          </ul>
+        </div>
+      </section>
+    </div>
+    
+    <div class="intro">
+      <div class="intro-text">
+        <h1 class="hide">
+          <span class="text">Bonjours</span>
+        </h1>
+        <h1 class="hide">
+          <span class="text">C'est Molly's</span>
+        </h1>
+        <h1 class="hide">
+          <span class="text">Maison</span>
+        </h1>
+      </div>
+    </div>
+    
+
+    <!-- Intro-Page Script  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"></script>
+      
+    <script src="intro/apphome.js"></script>
+
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.js"
+      integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Popper.JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"
+      integrity="sha256-/ijcOLwFf26xEYAjW75FizKVo5tnTYiQddPZoLUHHZ8="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js\cv.js"></script>
+  </body>
+</html>
